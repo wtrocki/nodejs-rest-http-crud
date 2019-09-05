@@ -1,0 +1,12 @@
+type Note {
+  id: ID!
+  title: String!
+  description: String!
+  ## Relationship
+  comments: [Comment]!
+}
+
+type Comment @update(enable: false){
+  id: ID!
+  text: String!
+}
